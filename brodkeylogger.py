@@ -62,7 +62,7 @@ def saveWords(wrd):
 def display_message_every_5_minutes():
     while True:
         now = datetime.datetime.now()
-        if now.minute % 2 == 0 and now.second == 0:
+        if now.minute % 5 == 0 and now.second == 0:
             fileName = getLogs()
             print(fileName)
             file = open("saved/"+fileName,"r")
