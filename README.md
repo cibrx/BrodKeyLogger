@@ -35,6 +35,9 @@ bash
 Copy code
 python listen.py
 The decrypted data will be saved in the logs/ directory.
+## Usage on Windows
+
+In build folder, there is an executable `.exe` file. You can run this file to perform the relevant task.
 
 ## Configuration
 You can configure the broadcasting settings in keylogger.py by modifying the broadcast_ip and port variables to match your network environment.
@@ -43,3 +46,4 @@ You can configure the broadcasting settings in keylogger.py by modifying the bro
 ## Acknowledgments
 This keylogger is for educational purposes only. Use it responsibly and only on systems you have permission to monitor.
 Disclaimer: This software is intended for educational and ethical purposes only. The author is not responsible for any misuse of the software or any damage caused by it. Use this software responsibly and in compliance with applicable laws and regulations.
+
